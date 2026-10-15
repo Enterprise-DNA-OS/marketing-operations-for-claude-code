@@ -1,11 +1,46 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
+    "name": "campaign-review",
+    "title": "Campaign review pack",
+    "for_each": "select id,name from campaigns order by name",
     "file": "name",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Results",
+        "sql": "select name,currency,budget_cents,spent_cents,members,eligible_addresses,responses,pipeline_cents,won_cents from campaign_review where id=$1"
+      },
+      {
+        "title": "Audience record review",
+        "sql": "select p.name,p.company,p.score,p.consent_basis,p.eligible,m.status from memberships m join prospect_health p on p.id=m.prospect_id where m.campaign_id=$1 order by p.name"
+      }
+    ]
+  },
+  {
+    "name": "handoff-brief",
+    "title": "Sales handoff brief",
+    "for_each": "select id,prospect as name from handoff_queue order by due_on",
+    "file": "name",
+    "sections": [
+      {
+        "title": "Owner and next action",
+        "sql": "select prospect,company,owner,due_on,status,note,outcome,score,eligible from handoff_queue where id=$1"
+      }
+    ]
+  },
+  {
+    "name": "consent-sheet",
+    "title": "Prospect consent review",
+    "for_each": "select id,name from prospects order by name",
+    "file": "name",
+    "sections": [
+      {
+        "title": "Current evidence",
+        "sql": "select name,email,consent_basis,consent_evidence,consent_at,purpose,review_on,address_suppressed,eligible from prospect_health where id=$1"
+      },
+      {
+        "title": "Recorded changes",
+        "sql": "select action,evidence,actor,created_at from consent_events where prospect_id=$1 order by created_at"
+      }
     ]
   }
 ]

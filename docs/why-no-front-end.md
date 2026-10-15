@@ -1,24 +1,9 @@
-# Why there is no front end
+# A marketing desk operated through records
 
-Salesforce Account Engagement is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+This base suits a small team that reviews prospects, prepares sales handoffs and checks campaign results through a coding agent. It runs locally with an embedded database. Read-only HTML gives the owner a printable view of the week.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+It has no mobile application, drag-and-drop journey builder, live collaborative screen, public form, email delivery, cookie tracking or automatic CRM sync. Local operation is not mobile offline capture and sync. Activity comes from recorded evidence and prospect exports. Those limits matter when you depend on continuous nurture programs.
 
-## What you gain
+Enterprise DNA scopes intake, sending, consent synchronisation, shared access and screens for your version. The free base works on its own for planning and record reviews. It is not a drop-in replacement for every Account Engagement service. Test required connections before changing subscriptions.
 
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep Salesforce Account Engagement. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/salesforce-account-engagement
+The database holds prospects, campaigns, memberships, activity, scoring rules, handoffs, opportunities, consent and import evidence. Claude Code, Codex, OpenCode or Cursor is the operating door. Omni by Enterprise DNA builds and operates your version: https://enterprisedna.co/omni/book/?offer=replace-software&utm_campaign=salesforce-account-engagement

@@ -1,0 +1,4 @@
+Prospect ID,First Name,Last Name,Email,Company,Assigned User,Score,Grade,Opted Out,Do Not Email,Source
+701,Jess,Ng,jess@example.test,"North, Research",Alex,60,B,False,False,"Synthetic event
+registration"
+702,Lee,Park,lee@example.test,Tasman Demo,Taylor,91,A,True,False,Synthetic signup
